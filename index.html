@@ -18,8 +18,14 @@
   </head>
   <body class="page">
     <header class="header card page__header">
-      <span class="page-title header__title">&lt;/HTML&gt;</span>
-      <h1 class="header__subtitle">закрывающий тег</h1>
+      <!-- <span class="page-title header__title">&lt;/HTML&gt;</span>
+      <h1 class="header__subtitle">закрывающий тег</h1> -->
+      <h1 class="header__title">
+        <span class="header__subtitle" aria-hidden="true"
+          >&lt;/html&gt;</span
+        >
+        Закрывающий тег
+      </h1>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
@@ -59,7 +65,8 @@
               <img
                 class="card__img"
                 src="https://media.giphy.com/media/1hqb8LwPS2xCNCpWH8/giphy.gif"
-                alt="GIF: Love"
+                loading="lazy"
+                alt="GIF: Влюбленная зайка умиляется"
               />
             </div>
             <div class="card__content">
@@ -70,7 +77,7 @@
               </p>
               <p>А начиналось-то красиво, как у Шекспира...</p>
             </div>
-            <footer class="card__footer">
+            <div class="card__buttons">
               <button
                 aria-labelledby="article_1_like_button"
                 type="button"
@@ -79,7 +86,8 @@
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 39 36"
                   fill="none"
-                  class="like-icon">
+                  class="like-icon"
+                  aria-hidden="true">
                   <g class="heart">
                     <path
                       class="contour"
@@ -110,7 +118,7 @@
                 class="button card__like-button">
                 <span class="button__text">Like</span>
               </button>
-            </footer>
+            </div>
           </article>
         </li>
         <li class="cards-list__item">
@@ -123,7 +131,8 @@
               <img
                 class="card__img filter-grayscale"
                 src="https://media.giphy.com/media/3ndAvMC5LFPNMCzq7m/giphy-downsized-large.gif"
-                alt="GIF: Dog smile"
+                loading="lazy"
+                alt="GIF: Собака улыбается"
               />
             </div>
             <div class="card__content">
@@ -139,7 +148,7 @@
                 Первый проект - отличный повод, что бы проверить насколько ты вовлечен!
               </p>
             </div>
-            <footer class="card__footer">
+            <div class="card__buttons">
               <button
                 aria-labelledby="article_2_like_button"
                 type="button"
@@ -179,7 +188,7 @@
                 class="button card__like-button">
                 <span class="button__text">Like</span>
               </button>
-            </footer>
+            </div>
           </article>
         </li>
         <li class="cards-list__item">
@@ -192,7 +201,8 @@
               <img
                 class="card__img filter-saturate"
                 src="https://media.giphy.com/media/l1KVaj5UcbHwrBMqI/giphy.gif"
-                alt="GIF: Crying girl"
+                loading="lazy"
+                alt="GIF: Маленькая девочка плачет от усталости"
               />
             </div>
             <div class="card__content">
@@ -203,7 +213,7 @@
               </p>
               <p>Ох, первая усталость...</p>
             </div>
-            <footer class="card__footer">
+            <div class="card__buttons">
               <button
                 aria-labelledby="article_3_like_button"
                 type="button"
@@ -243,7 +253,7 @@
                 class="button card__like-button">
                 <span class="button__text">Like</span>
               </button>
-            </footer>
+            </div>
           </article>
         </li>
         <li class="cards-list__item">
@@ -256,7 +266,8 @@
               <img
                 class="card__img filter-multiple"
                 src="https://media.giphy.com/media/Ph8OWoJA2M3eM/giphy.gif"
-                alt="GIF: Crying girl"
+                loading="lazy"
+                alt="GIF: Маленькая девочка плачет"
               />
             </div>
             <div class="card__content">
@@ -271,7 +282,7 @@
                 Сдача работы с 4 итерации, Боже побереги мои нервы...
               </p>
             </div>
-            <footer class="card__footer">
+            <div class="card__buttons">
               <button
                 aria-labelledby="article_4_like_button"
                 type="button"
@@ -311,7 +322,7 @@
                 class="button card__like-button">
                 <span class="button__text">Like</span>
               </button>
-            </footer>
+            </div>
           </article>
         </li>
         <li class="cards-list__item">
@@ -324,7 +335,8 @@
               <img
                 class="card__img filter-invert"
                 src="https://media.giphy.com/media/xT4uQDdDn09iW5Mvks/giphy.gif"
-                alt="GIF: Tired Man"
+                loading="lazy"
+                alt="GIF: Уставший мужчина падает со стула"
               />
             </div>
             <div class="card__content">
@@ -340,7 +352,7 @@
                 Жена перестала воспринимать меня как человека...
               </p>
             </div>
-            <footer class="card__footer">
+            <div class="card__buttons">
               <button
                 aria-labelledby="article_5_like_button"
                 type="button"
@@ -380,7 +392,7 @@
                 class="button card__like-button">
                 <span class="button__text">Like</span>
               </button>
-            </footer>
+            </div>
           </article>
         </li>
         <li class="cards-list__item">
@@ -393,7 +405,8 @@
               <img
                 class="card__img filter-sepia"
                 src="https://media.giphy.com/media/RJaUOmpBQAoE4RuWnj/giphy.gif"
-                alt="GIF: Women drink"
+                loading="lazy"
+                alt="GIF: Женщина пытается пить коктейль с трубочки"
               />
             </div>
             <div class="card__content">
@@ -406,7 +419,7 @@
                 Просто иногда необходимо расслабиться.
               </p>
             </div>
-            <footer class="card__footer">
+            <div class="card__buttons">
               <button
                 aria-labelledby="article_6_like_button"
                 type="button"
@@ -446,7 +459,7 @@
                 class="button card__like-button">
                 <span class="button__text">Like</span>
               </button>
-            </footer>
+            </div>
           </article>
         </li>
         <li class="cards-list__item">
@@ -459,7 +472,8 @@
               <img
                 class="card__img filter-blur"
                 src="https://media.giphy.com/media/tZiLOffTNGoak/giphy.gif"
-                alt="GIF: Stitch"
+                loading="lazy"
+                alt="GIF: Ститч испытывает раздражение"
               />
             </div>
             <div class="card__content">
@@ -474,7 +488,7 @@
                 Главное, это помнить, что в конце тебя ждет лучшее время, необходимо идти к цели.
               </p>
             </div>
-            <footer class="card__footer">
+            <div class="card__buttons">
               <button
                 aria-labelledby="article_7_like_button"
                 type="button"
@@ -514,7 +528,7 @@
                 class="button card__like-button">
                 <span class="button__text">Like</span>
               </button>
-            </footer>
+            </div>
           </article>
         </li>
         <li class="cards-list__item">
@@ -527,7 +541,8 @@
               <img
                 class="card__img filter-hue-rotate"
                 src="https://media.giphy.com/media/rmi45iyhIPuRG/giphy.gif"
-                alt="GIF: Like a Boss"
+                loading="lazy"
+                alt="GIF: Мужчина радуется"
               />
             </div>
             <div class="card__content">
@@ -543,7 +558,7 @@
                 Сейчас самое время отдохнуть, ведь в переди долгий и веселый путь!
               </p>
             </div>
-            <footer class="card__footer">
+            <div class="card__buttons">
               <button
                 aria-labelledby="article_8_like_button"
                 type="button"
@@ -583,7 +598,7 @@
                 class="button card__like-button">
                 <span class="button__text">Like</span>
               </button>
-            </footer>
+            </div>
           </article>
         </li>
       </ul>
@@ -595,12 +610,12 @@
         <svg class="button__icon" viewBox="0 0 29 28">
           <use href="svg/floppy.svg#floppy"/>
         </svg>
-        <span class="button__text">Сохранить на память</span>
+        <span class="button__text">Сохранить на&nbsp;память</span>
       </button>
     </main>
     <dialog class="modal" id="modal">
       <div class="modal__content">
-        <svg class="modal__icon" viewBox="0 0 29 28">
+        <svg class="modal__icon" viewBox="0 0 29 28" aria-hidden="true">
           <use href="svg/floppy.svg#floppy"/>
         </svg>
         <p>Вставьте дискету,чтобы продолжить</p>

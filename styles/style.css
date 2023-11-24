@@ -116,13 +116,27 @@
   text-transform: uppercase;
 }
 
-.header__title {
+/* .header__title {
   margin-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
   margin-block-end: 20px;
+} */
+
+.header__title {
+  margin: clamp(7.5rem, 6.3318rem + 4.9844vw, 8.5rem) 0 25px;
+  font-weight: inherit;
+  font-size: clamp(0.875rem, 0.2179rem + 2.8037vw, 1.4375rem);
+  text-align: center;
 }
 
-.header__subtitle {
+/* .header__subtitle {
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+} */
+
+.header__subtitle {
+  display: block;
+  margin: 0 0 20px;
+  font-weight: inherit;
+  font-size: clamp(3.0625rem, 1.8943rem + 4.9844vw, 4.0625rem);
 }
 
 .header__theme-menu {
@@ -163,7 +177,7 @@
 }
 
 .theme-menu__button:focus {
-  outline: 0;
+  outline: none;
   opacity: 0.6;
 }
 
@@ -255,7 +269,7 @@
   line-height: calc(21 / 18);
 }
 
-.card__footer {
+.card__buttons {
   display: flex;
   justify-content: end;
   align-items: stretch;
