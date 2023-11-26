@@ -146,6 +146,7 @@
   position: relative;
   overflow: hidden;
   border: 2px solid var(--text-color, #000000);
+  margin: 0;
 }
 
 .card__img {
@@ -300,9 +301,9 @@
 }
 
 .modal__icon {
-  flex-shrink: 0; 
-  inline-size: 39px; 
-  block-size: 39px; 
+  flex-shrink: 0;
+  inline-size: 39px;
+  block-size: 39px;
 }
 
 .modal__button {
