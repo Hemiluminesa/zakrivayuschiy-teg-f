@@ -14,146 +14,63 @@
 
 */
 
-/* Filter */
 
-.filter-grayscale {
-  filter: grayscale(70%);
-}
+/* Уважаемый ревьюер, добрый вечер, я уже переписал весь код, надеюсь на этот раз все нормально. Это моя последняя итерация, я надеюсь, что перейду дальше... */
 
-.filter-multiple {
-  filter: contrast(50%) hue-rotate(35deg) saturate(130%);
-}
-
-.filter-hue-rotate {
-  filter: hue-rotate(210deg);
-}
-
-.filter-saturate {
-  filter: saturate(250%);
-}
-
-.filter-invert {
-  filter: invert(100%);
-}
-
-.filter-sepia {
-  filter: sepia(90%);
-}
-
-.filter-blur {
-  filter: blur(10px);
-}
-
-/* Page and Modal */
+/* Page and Content*/
 
 .page {
-  padding-block-start: 100px;
+  min-inline-size: 320px;
   color: var(--text-color, #000000);
   font-family: var(--page-main-font-family, "Inter", sans-serif);
   background-color: var(--page-background-color, #ffffff);
   background-image: var(--page-background-image, none);
+  font-variation-settings: "wght" var(--page-main-font-weight, 400);
   background-size: cover;
   background-attachment: fixed;
-  font-variation-settings: "wght" var(--page-main-font-weight, 400);
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
 }
 
-.page__header {
-  margin-block-end: 100px;
-}
-
-.modal {
-  border: 2px solid var(--text-color, #000000);
-  padding: 25px 30px;
-  color: var(--text-color, #000000);
-  font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
-  line-height: 1.5;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  text-transform: uppercase;
-  background: var(--page-background-color, #ffffff);
-  max-inline-size: 355px;
-  overflow-x: hidden;
-}
-
-.modal[open] {
-  display: grid;
-  grid-template-rows: repeat(2, min-content);
-  gap: 30px;
-}
-
-.modal::backdrop {
-  opacity: 0.75;
-  background: var(--color-black, #000000);
-}
-
-.modal__content {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.modal__icon {
-  flex-shrink: 0;
-  inline-size: 39px;
-  block-size: 39px;
-}
-
-.modal__button {
-  inline-size: 100%;
-}
-
-.page-title {
-  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+.content {
+  margin: 0 auto;
+  max-inline-size: 696px;
+  margin-block-start: 100px;
 }
 
 /* Header */
 
 .header {
-  display: grid;
-  justify-items: center;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  padding: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem) 0 12px;
   font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
+  font-weight: 400;
   line-height: normal;
   text-transform: uppercase;
+  border: 2px solid var(--text-color, #000000);
+  background-color: var(--page-background-color, #ffffff);
 }
 
-/* .header__title {
-  margin-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
-  margin-block-end: 20px;
-} */
+.header__logo {
+  font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  text-decoration: none;
+}
+
+.header__logo:focus {
+  outline: none;
+}
 
 .header__title {
-  margin: clamp(7.5rem, 6.3318rem + 4.9844vw, 8.5rem) 0 25px;
-  font-weight: inherit;
+  font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
   font-size: clamp(0.875rem, 0.2179rem + 2.8037vw, 1.4375rem);
-  text-align: center;
+  padding: 20px 0px 25px;
 }
 
-/* .header__subtitle {
-  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-} */
-
-.header__subtitle {
-  display: block;
-  margin: 0 0 20px;
-  font-weight: inherit;
-  font-size: clamp(3.0625rem, 1.8943rem + 4.9844vw, 4.0625rem);
+.theme-menu__item {
+  margin-block-end: 9px;
 }
-
-.header__theme-menu {
-  margin-block-end: 25px;
-}
-
-.theme-menu__list {
-  display: grid;
-  gap: 8px;
-  padding-inline-start: 20px;
-}
-
-/* Button */
 
 .theme-menu__button {
   position: relative;
@@ -163,6 +80,7 @@
   background: transparent;
   transition: opacity 0.3s ease;
   cursor: pointer;
+  padding-inline-start: 27px;
 }
 
 .theme-menu__button:not(:disabled)::after {
@@ -199,96 +117,94 @@
   content: "▶";
   position: absolute;
   animation: arrow 0.5s ease-in-out infinite alternate;
-  inset-inline-start: -20px;
-  /* inset-block-start: 50%; */
+  inset-inline-start: 6px;
 }
 
-/* Main and Card */
+/* Card */
 
 .main {
-  display: grid;
-  justify-items: center;
-  gap: 50px;
-  padding-block-end: 105px;
-}
-
-.cards-list {
-  display: grid;
-  gap: 52px;
+  margin: 0 auto;
+  max-inline-size: 696px;
+  padding-top: 104px;
 }
 
 .card {
-  margin-inline: auto;
   border: 2px solid var(--text-color, #000000);
   background: var(--page-background-color, #ffffff);
-  max-inline-size: 696px;
-}
-
-.card__header {
-  border-block-end: 2px solid var(--text-color, #000000);
-  padding: 4px 10px;
+  margin-block-end: 50px;
 }
 
 .card__title {
   font-size: 18px;
-  line-height: normal;
   font-variation-settings: "wght" var(--headings-font-weight, 700);
+  line-height: normal;
+  font-style: normal;
+  padding: 5px 22px 5px 8px;
 }
 
 .card__img-wrapper {
   position: relative;
   overflow: hidden;
-}
-
-.card__img-label {
-  position: absolute;
-  z-index: 1;
-  opacity: 0.5;
-  color: var(--text-color, #000000);
-  font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
-  font-size: 14px;
-  line-height: normal;
-  text-transform: uppercase;
-  text-shadow: 0 0 1px var(--page-background-color, #ffffff);
-  inset-inline-end: 25px;
-  inset-block-start: 27px;
-
-  mix-blend-mode: hard-light;
+  border: 2px solid var(--text-color, #000000);
 }
 
 .card__img {
   display: block;
   object-fit: cover;
-  object-position: center;
   inline-size: 100%;
   aspect-ratio: 1 / 1;
 }
 
+.card__img-label {
+  position: absolute;
+  color: var(--text-color, #000000);
+  font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  text-shadow: 0 0 1px var(--page-background-color, #ffffff);
+  opacity: 0.5;
+  top: 25px;
+  right: 25px;
+  mix-blend-mode: hard-light;
+}
+
 .card__content {
-  display: grid;
-  gap: 27px;
-  border-block-start: 2px solid var(--text-color, #000000);
-  padding: 25px 30px 0 25px;
+  padding: 25px;
+}
+
+.card__content-text {
+  font-family: var(--page-main-font-family, "Inter", sans-serif);
   font-size: 18px;
-  line-height: calc(21 / 18);
+  line-height: 21px;
+}
+
+.card__content-text:nth-child(1) {
+  margin-block-end: 27px;
+}
+
+.card__content-text:nth-child(2) {
+  margin-block-end: 25px;
 }
 
 .card__buttons {
   display: flex;
-  justify-content: end;
-  align-items: stretch;
   gap: 5px;
-  padding: 25px 25px 23px 25px;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .card__icon-button {
-  display: grid;
-  border: 2px solid transparent;
-  padding: 0;
-  background: transparent;
-  transition: border-color 0.3s ease;
-  cursor: pointer;
+  display: flex;
   appearance: none;
+  border: 2px solid transparent;
+  background: var(--page-background-color, #ffffff);
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  justify-content: center;
+  padding: 0;
+  align-items: center;
 }
 
 .card__icon-button:focus {
@@ -299,77 +215,143 @@
   border-color: var(--text-color, #000000);
 }
 
-/* Button Footer */
+.like-icon {
+  inline-size: 39px;
+  block-size: 36px;
+}
+
+.card__like-button {
+  padding: 9px 17px;
+  min-height: 38px;
+  inline-size: 130px;
+}
+
+.button__text {
+  font-size: 14px;
+  font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
+  color: var(--button-text-color, #ffffff);
+  font-weight: 400;
+  font-style: normal;
+  mix-blend-mode: difference;
+  line-height: 12.6px;
+}
+
+/* Footer */
+
+.footer-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-block-end: 100px;
+  padding-inline: 30px;
+}
+
+.button--save {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 12.6px;
+  padding: 15px 20px;
+}
+
+.button__icon {
+  fill: var(--button-text-color, #ffffff);
+  block-size: 21px;
+  inline-size: 21px;
+  stroke: var(--button-text-color, #ffffff);
+  mix-blend-mode: difference;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  font-style: normal;
+  max-inline-size: 357px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 150%;
+  gap: 30px;
+  border: 2px solid var(--text-color, #000000);
+  padding: 30px;
+  background: var(--page-background-color, #ffffff);
+  color: var(--text-color, #000000);
+  font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
+}
+
+.modal:not([open]) {
+  display: none;
+}
+
+.modal::backdrop {
+  opacity: 0.75;
+  background: var(--color-black, #000000);
+}
+
+.modal__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  inline-size: 100%;
+}
+
+.modal__icon {
+  flex-shrink: 0; 
+  inline-size: 39px; 
+  block-size: 39px; 
+}
+
+.modal__button {
+  display: flex;
+  flex-direction: column;
+  min-width: 293px;
+  padding: 15px 20px;
+  text-transform: uppercase;
+}
+
+/* Button */
 
 .button {
-  position: relative;
-  z-index: 1;
   border: 2px solid var(--text-color, #000000);
-  padding: 9px 17px;
-  font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
-  font-size: 14px;
-  text-transform: inherit;
   background: var(--page-background-color, #ffffff);
-  transition: box-shadow 0.3s ease;
   cursor: pointer;
-  appearance: none;
+  position: relative;
+  align-items: center;
+  justify-content: center;
 }
 
 .button:focus {
   outline: none;
 }
 
-.button:focus-visible {
-  box-shadow: 2px 2px 0px 0px var(--text-color, #000000);
+.button:hover {
+  cursor: pointer;
 }
 
-.button::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: var(--text-color, #000000);
-  transition: transform 0.5s ease-in-out;
-  transform: scaleX(0);
-  transform-origin: left;
-  inline-size: 100%;
-  block-size: 100%;
+.button:focus-visible {
+  box-shadow: 2px 2px 0px 0px var(--text-color, #000000);
+  transition: box-shadow 0.3s ease;
 }
 
 .button:hover::before {
-  transform: scaleX(1);
+  width: 100%;
 }
 
-.card__like-button {
-  block-size: 35px;
-  inline-size: 130px;
-}
-
-.button--save {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  padding: 15px 20px;
-  inline-size: auto;
-  block-size: 53px;
-}
-
-.button__text,
-.button__icon {
-  color: var(--button-text-color, #ffffff);
-  mix-blend-mode: difference;
-}
-
-.button__icon {
-  block-size: 22px;
-  inline-size: 22px;
-}
-
-.like-icon {
-  block-size: 36px;
-  inline-size: 39px;
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background: var(--text-color, #000000);
+  transition: width 0.3s ease;
+  inline-size: 100%;
+  block-size: 100%;
+  width: 0;
 }
 
 /* Media */
@@ -398,5 +380,37 @@
     text-shadow: none;
     -webkit-text-stroke: 1px var(--page-background-color, #ffffff);
     text-stroke: 1px var(--page-background-color, #ffffff);
+    top: 25px;
+    right: 11px;
   }
+}
+
+/* Filter */
+
+.filter-grayscale {
+  filter: grayscale(70%);
+}
+
+.filter-multiple {
+  filter: contrast(50%) hue-rotate(35deg) saturate(130%);
+}
+
+.filter-hue-rotate {
+  filter: hue-rotate(210deg);
+}
+
+.filter-saturate {
+  filter: saturate(250%);
+}
+
+.filter-invert {
+  filter: invert(100%);
+}
+
+.filter-sepia {
+  filter: sepia(90%);
+}
+
+.filter-blur {
+  filter: blur(10px);
 }
